@@ -1,14 +1,12 @@
 import express from "express";
-import res from "express/lib/response";
+import morgan from "morgan";
 
-const PORT = 3000;  // TODO: env 파일로 빼기
+// TODO: env 파일로 빼기
+const PORT = 3000;
+const NODE_ENV = "dev";
 
 const app = express();
-
-const logger = (req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-};
+const loggerMiddleware = NODE_ENV === "dev" ? morgan("dev") : morgan("common");
 
 const handleHome = (req, res) => {
   return res.send("home");
@@ -18,9 +16,9 @@ const handleLogin = (req, res) => {
   return res.send("login");
 };
 
-app.get("/", logger, handleHome);
-
-app.get("/login", logger, handleLogin);
+app.use(loggerMiddleware);
+app.get("/", handleHome);
+app.get("/login", handleLogin);
 
 const handleListening = () => {
   console.log(`✅ Server listening on port ${PORT}!`);
