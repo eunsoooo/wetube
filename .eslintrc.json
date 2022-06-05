@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "parser": "@babel/eslint-parser",
+  "rules": {
+      "semi": ["warn", "always"],
+      "quotes": ["warn", "double"],
+      "eol-last": ["warn", "always"],
+      "indent": ["warn", 2],
+      "space-before-blocks": ["warn", "always"],
+      "comma-dangle": ["warn", "always-multiline"],
+      "no-trailing-spaces": "warn"
+  }
+}
