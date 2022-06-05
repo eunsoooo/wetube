@@ -2,7 +2,7 @@
   "name": "wetube",
   "version": "1.0.0",
   "scripts": {
-    "start:dev": "nodemon --exec babel-node index.js"
+    "start:dev": "nodemon --exec babel-node src/server.js"
   },
   "repository": {
     "type": "git",
