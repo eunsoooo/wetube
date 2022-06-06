@@ -1,9 +1,11 @@
 import express from "express";
-import { handleEditVideo, handleWatchVideo } from "../controllers/videoController";
+import { deleteVideo, editVideo, uploadVideo, watchVideo } from "../controllers/videoController";
 
 const videoRouter = express.Router();
 
-videoRouter.get("/watch", handleWatchVideo);
-videoRouter.get("/edit", handleEditVideo);
+videoRouter.get("/upload", uploadVideo);
+videoRouter.get("/:id", watchVideo);
+videoRouter.get("/:id/edit", editVideo);
+videoRouter.get("/:id/delete", deleteVideo);
 
 export default videoRouter;

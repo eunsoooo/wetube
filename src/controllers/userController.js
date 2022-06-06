@@ -1,11 +1,11 @@
-const handleJoin = (req, res) => res.send("Join");
+export const join = (req, res) => res.send("Join");
 
-const handleEditUser = (req, res) => res.send("Edit User");
+export const login = (req, res) => res.send("Login");
 
-const handleDeleteUser = (req, res) => res.send("Delete User");
+export const seeUser = (req, res) => res.send("See User");
 
-export {
-  handleJoin,
-  handleEditUser,
-  handleDeleteUser,
-};
+export const logout = (req, res) => res.send("Logout");
+
+export const editUser = (req, res) => res.send("Edit My Profile");
+
+export const deleteUser = (req, res) => res.send("Withrawal");
