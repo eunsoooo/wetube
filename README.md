@@ -37,3 +37,37 @@ npm run start
 > **Rename** : 파일/폴더 이름 수정 및 위치 변경
 > **Remove** : 파일 삭제  
 > **Test** : 테스트 코드 추가 및 수정  
+
+<br>
+
+## URLs
+### Global
+```
+/ -> Home
+/join -> Join
+/login -> Login
+/search -> Search Video
+```
+
+### User
+``` 
+/users/:id -> See User
+/users/logout -> Logout
+/users/edit -> Edit My Profile
+/users/delete -> Withrawal
+```
+
+### Video
+```
+/videos/:id -> See Video
+/videos/:id/edit -> Edit Video
+/videos/:id/delete -> Delete Video
+/videos/upload -> Upload Video
+```
+<details>
+<summary>학습 내용</summary>
+<div markdown="1">
+1. 
+2. 
+</div>
+</details>
